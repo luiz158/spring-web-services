@@ -1,0 +1,6 @@
+XML Structure
+
+GetCourseDetailsRequest -> GetCourseDetailsResponse
+
+input 	-> 	ID - 123
+output 	->		

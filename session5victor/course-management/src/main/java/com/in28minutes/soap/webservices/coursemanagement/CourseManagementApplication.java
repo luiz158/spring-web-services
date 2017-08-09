@@ -1,14 +1,12 @@
-package com.in28minutes.springboot.basics.springbootin10steps;
+package com.in28minutes.soap.webservices.coursemanagement;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringbootIn10StepsApplication {
+public class CourseManagementApplication {
 
 	public static void main(String[] args) {
-
-		SpringApplication.run(SpringbootIn10StepsApplication.class, args);
-
+		SpringApplication.run(CourseManagementApplication.class, args);
 	}
 }

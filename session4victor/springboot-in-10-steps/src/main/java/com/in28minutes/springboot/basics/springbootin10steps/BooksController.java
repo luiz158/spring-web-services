@@ -18,8 +18,9 @@ public class BooksController {
 	private List<Book> getBooksList() {
 		List<Book> books = new LinkedList<>();
 
-		books.add(new Book(1L, "Learning Scala", "Martin Odersky"));
+		books.add(new Book(1L, "Programming Finite Elements in Java", "Gennadiy Nikishkov"));
 		books.add(new Book(2L, "The C programming Language", "B. Kernighan"));
+		books.add(new Book(3L, "Thinking in Java", "Bruce Eckel"));
 
 		return books;
 	}
