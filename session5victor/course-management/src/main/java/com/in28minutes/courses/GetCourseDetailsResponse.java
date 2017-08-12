@@ -8,8 +8,6 @@
 
 package com.in28minutes.courses;
 
-import java.util.ArrayList;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -27,7 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="CourseDetails" type="{http://www.in28minutes.com/courses}CourseDetails" maxOccurs="unbounded"/>
+ *         &lt;element name="CourseDetails" type="{http://www.in28minutes.com/courses}CourseDetails"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -40,39 +38,34 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "", propOrder = {
     "courseDetails"
 })
-@XmlRootElement(name = "GetAllCourseDetailsResponse")
-public class GetAllCourseDetailsResponse {
+@XmlRootElement(name = "GetCourseDetailsResponse")
+public class GetCourseDetailsResponse {
 
     @XmlElement(name = "CourseDetails", required = true)
-    protected List<CourseDetails> courseDetails;
+    protected CourseDetails courseDetails;
 
     /**
-     * Gets the value of the courseDetails property.
+     * Obtiene el valor de la propiedad courseDetails.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the courseDetails property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getCourseDetails().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link CourseDetails }
-     * 
-     * 
+     * @return
+     *     possible object is
+     *     {@link CourseDetails }
+     *     
      */
-    public List<CourseDetails> getCourseDetails() {
-        if (courseDetails == null) {
-            courseDetails = new ArrayList<CourseDetails>();
-        }
-        return this.courseDetails;
+    public CourseDetails getCourseDetails() {
+        return courseDetails;
+    }
+
+    /**
+     * Define el valor de la propiedad courseDetails.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link CourseDetails }
+     *     
+     */
+    public void setCourseDetails(CourseDetails value) {
+        this.courseDetails = value;
     }
 
 }
