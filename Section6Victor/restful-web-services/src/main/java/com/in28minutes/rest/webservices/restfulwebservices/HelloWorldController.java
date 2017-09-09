@@ -16,7 +16,7 @@ import com.in28minutes.rest.webservices.restfulwebservices.helloworld.HelloWorld
 public class HelloWorldController {
 
 	@Autowired
-	private MessageSource messagesource;
+	private MessageSource bundleMessageSource;
 
 	// Define method: GET
 	// Define URI: /helloWorld
@@ -44,7 +44,7 @@ public class HelloWorldController {
 	@GetMapping(path = "/hello-world-internationalized")
 	public String helloWorldInternationalized(
 			@RequestHeader(name = "Accept-Language", required = false) Locale locale) {
-		return messagesource.getMessage("good.morning.message", null, locale);
+		return bundleMessageSource.getMessage("good.morning.message", null, locale);
 	}
 
 }
